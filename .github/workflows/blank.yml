@@ -6,11 +6,12 @@ on:
       duration:
         description: '🕐 Thời gian sử dụng'
         required: false
-        default: '24h'
+        default: '5h40m'
         type: choice
         options:
         - '1h'
         - '3h' 
+        - '5h40m'
         - '24h'
 
 jobs:
@@ -269,6 +270,7 @@ jobs:
               "1h" { $totalMinutes = 60; $displayTime = "1 giờ" }
               "3h" { $totalMinutes = 180; $displayTime = "3 giờ" }
               "5h40m" { $totalMinutes = 340; $displayTime = "5 giờ 40 phút" }
+              "24h"    { $totalMinutes = 1440; $displayTime = "24 giờ" }
           }
           
           # Tính thời gian chính xác
